@@ -1,0 +1,31 @@
+practical 4:
+
+1) import pandas as pd
+import numpy as np
+
+2) data = {
+    'Category': [1, 2, 1, 3, 2],
+    'Type': ['Photo', 'Video', 'Photo', 'Status', 'Video'],
+    'Total Interactions': [100, 200, 150, 300, 250],
+    'Post Month': [1, 2, 3, 4, 5],
+    'Post Weekday': [2, 3, 4, 5, 6],
+    'Post Hour': [10, 12, 14, 16, 18]
+}
+
+df = pd.DataFrame(data)
+df
+
+3) df1 = df[['Category', 'Type', 'Total Interactions']]
+df2 = df[['Post Month', 'Post Weekday', 'Post Hour']]
+
+df1
+
+4) merged = pd.concat([df1, df2], axis=1)
+merged
+
+5) df.shape
+6) pd.melt(df)
+7) df.T
+8) df.sort_values(by='Category')
+
+9) df.sort_index()
