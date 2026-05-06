@@ -1,0 +1,31 @@
+Practical 6:
+
+1) start-dfs.sh
+jps
+2) nano prac6.py
+3) import os
+# Create a sample file
+with open("sample.txt", "w") as f:
+    f.write("Hello Hadoop\n")
+    f.write("Python integration\n")
+    f.write("Big Data practical\n")
+
+print("File created successfully!")
+
+# Upload file to HDFS
+os.system("hdfs dfs -mkdir -p /prac6")
+os.system("hdfs dfs -put sample.txt /prac6")
+
+print("File uploaded to HDFS!")
+
+# Read file from HDFS
+print("\nReading from HDFS:")
+os.system("hdfs dfs -cat /prac6/sample.txt")
+
+# Copy file from HDFS to local
+os.system("hdfs dfs -get /prac6/sample.txt")
+
+print("\nFile copied back to local system!")
+4) python3 prac6.py
+5) hdfs dfs -ls /prac6
+
