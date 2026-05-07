@@ -26,6 +26,8 @@ df
 
 5)df['Age'] = df['Age'].fillna(df['Age'].mean())
 df['Salary'] = df['Salary'].fillna(df['Salary'].mean())
+//df['Age'].fillna(df['Age'].mean(), inplace=True)
+//df['Salary'].fillna(df['Salary'].mean(), inplace=True)
 
 6) scaler = StandardScaler()
 df_scaled = scaler.fit_transform(df)
